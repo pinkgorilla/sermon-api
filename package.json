@@ -19,7 +19,7 @@
   "dependencies": {
     "assert": "^1.4.1",
     "sermon-model": "git+https://github.com/pinkgorilla/sermon-model.git",
-    "sermon-module": "git+https://github.com/pinkgorilla/sermon-module.git",
+    "sermon-module": "git+https://github.com/pinkgorilla/sermon-module.git#dev",
     "mongo-factory": "^1.0.0",
     "mongodb": "^2.2.5", 
     "restify": "^4.1.1",
