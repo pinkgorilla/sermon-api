@@ -14,6 +14,9 @@ server.use(function(request, response, next) {
     query.order = !query.order ? {} : JSON.parse(query.order);
     query.filter = !query.filter ? {} : JSON.parse(query.filter);
     request.queryInfo = query;
+    request.user = {
+        username: 'api'
+    }
     next();
 });
 
