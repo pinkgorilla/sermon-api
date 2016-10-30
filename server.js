@@ -21,8 +21,12 @@ server.use(function(request, response, next) {
 });
 
 
+var v1SermonReconcileRouter = require('./src/routers/v1/master/sermon-reconcile-router');
+v1SermonReconcileRouter.applyRoutes(server, "/v1/sermons/reconcile");
+
 var v1SermonRouter = require('./src/routers/v1/master/sermon-router');
 v1SermonRouter.applyRoutes(server, "/v1/sermons");
+
 
 server.listen(process.env.PORT, process.env.IP);
 console.log(`server created at ${process.env.IP}:${process.env.PORT}`);
