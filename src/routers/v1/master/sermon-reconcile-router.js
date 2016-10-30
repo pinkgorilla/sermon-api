@@ -13,9 +13,9 @@ router.post('/', (request, response, next) => {
             var data = request.body;
 
             manager.reconcile()
-                .then(docId => {
-                    var result = resultFormatter.ok(apiVersion, 204);
-                    response.send(204, result);
+                .then(numberOfDocs => {
+                    var result = resultFormatter.ok(apiVersion, 200, numberOfDocs);
+                    response.send(200, result);
                 })
                 .catch(e => {
                     var error = resultFormatter.fail(apiVersion, 400, e);
